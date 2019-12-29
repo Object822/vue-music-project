@@ -22,6 +22,7 @@ function param (data) {
   // 循环遍历data进行拼接
   for (const k in data) {
     let value = data[k] !== undefined ? data[k] : ''
+    // 对url进行转码
     url += `&${k}=${encodeURIComponent(value)}`
   }
   // 去掉url中第一个&符号
